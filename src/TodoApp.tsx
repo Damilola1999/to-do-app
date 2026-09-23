@@ -194,7 +194,7 @@ export default function TodoApp() {
           </div>
 
           <div className="header-title">
-            <h1>Today</h1>
+            <h1>Nudge</h1>
             <p>{tasks.length} tasks</p>
           </div>
 

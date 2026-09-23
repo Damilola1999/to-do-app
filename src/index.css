@@ -115,12 +115,20 @@ body {
 
 .header-title {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .header-title h1 {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
   font-size: 2.25rem;
-  font-weight: bold;
   margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .header-title p {
@@ -868,6 +876,44 @@ body {
   height: 2rem;
   opacity: 0.4;
 }
+
+/* App Entrance Animation */
+@keyframes appAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.app-container {
+  animation: appAppear 0.55s cubic-bezier(0.22, 1, 0.37, 1) 0.05s both;
+}
+
+.header {
+  animation: appAppear 0.55s cubic-bezier(0.22, 1, 0.37, 1) 0.15s both;
+}
+
+.tasks-section {
+  animation: appAppear 0.55s cubic-bezier(0.22, 1, 0.37, 1) 0.25s both;
+}
+
+.task-card {
+  opacity: 0;
+  animation: appAppear 0.4s ease-out forwards;
+}
+
+.task-card:nth-child(1) { animation-delay: 0.32s; }
+.task-card:nth-child(2) { animation-delay: 0.37s; }
+.task-card:nth-child(3) { animation-delay: 0.42s; }
+.task-card:nth-child(4) { animation-delay: 0.47s; }
+.task-card:nth-child(5) { animation-delay: 0.52s; }
+.task-card:nth-child(6) { animation-delay: 0.57s; }
+.task-card:nth-child(7) { animation-delay: 0.62s; }
+.task-card:nth-child(8) { animation-delay: 0.67s; }
 
 /* Theme Transitions */
 .app-container,
